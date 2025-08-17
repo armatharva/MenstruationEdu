@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenstruationEdu - Your Guide to Menstrual Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+<body>
+    <!-- Girl Scouts Logo in corner -->
+    <div class="girl-scouts-logo">
+        <div class="logo-container">
+            <img src="https://images.unsplash.com/photo-1587653394453-7692616605ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnaXJsJTIwc2NvdXRzJTIwbG9nbyUyMGJhZGdlfGVufDF8fHx8MTc1NTM4OTExNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Girl Scouts Logo" />
+        </div>
+        <p class="logo-text">Girl Scouts Gold Award</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+                <div class="title-section">
+                    <h1 class="main-title">MenstruationEdu</h1>
+                    <p class="subtitle">Your comprehensive guide to menstrual health and hygiene</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <!-- Tabs Navigation -->
+        <div class="tabs-container">
+            <div class="tabs-list">
+                <button class="tab-trigger active" data-tab="demo">Video Demo</button>
+                <button class="tab-trigger" data-tab="products">Products</button>
+                <button class="tab-trigger" data-tab="hygiene">Hygiene</button>
+                <button class="tab-trigger" data-tab="health">Health Info</button>
+                <button class="tab-trigger" data-tab="anatomy">Anatomy</button>
+                <button class="tab-trigger" data-tab="qa">Ask a Doctor</button>
+            </div>
+
+            <!-- Tab Content: Video Demo -->
+            <div class="tab-content active" id="demo">
+                <div class="demo-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title pink">How to Use a Pad</h2>
+                            <p class="card-description">Watch this step-by-step demonstration video</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="video-placeholder">
+                                <video controls class="video-element">
+                                    <source src="./pad-demonstration-video.mp4" type="video/mp4">
+                                    <source src="./pad-demonstration-video.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                                
+                                <!-- Fallback content when video is not available -->
+                                <div class="video-fallback">
+                                    <i data-lucide="play" class="play-icon"></i>
+                                    <p class="video-text">Instructional Video</p>
+                                    <div class="info-box">
+                                        <div class="info-content">
+                                            <i data-lucide="info" class="info-icon"></i>
+                                            <div class="info-text">
+                                                <p><strong>To add your video:</strong></p>
+                                                <p>1. Save your video as "pad-demonstration-video.mp4"</p>
+                                                <p>2. Place it in the same folder as index.html</p>
+                                                <p>3. Optionally add a thumbnail as "video-thumbnail.jpg"</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tips-box">
+                                <h4>Quick Tips:</h4>
+                                <ul>
+                                    <li>• Change your pad every 4-6 hours</li>
+                                    <li>• Always wash hands before and after</li>
+                                    <li>• Dispose of used pads responsibly</li>
+                                    <li>• Keep extra pads in your bag</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title purple">Step-by-Step Instructions</h2>
+                            <p class="card-description">Follow these simple steps for proper pad application</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="steps-list">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-text">
+                                        <p>Wash your hands thoroughly with soap and water</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-text">
+                                        <p>Remove the pad from its wrapper and unfold it completely</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-text">
+                                        <p>Peel off the backing strip to expose the adhesive</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div class="step-text">
+                                        <p>Center the pad in your underwear with the adhesive side down</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">5</div>
+                                    <div class="step-text">
+                                        <p>Press down firmly to ensure the pad sticks properly</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">6</div>
+                                    <div class="step-text">
+                                        <p>If the pad has wings, wrap them around the underwear</p>
+                                    </div>
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                </div>
+                            </div>
+                            <div class="reminder-box">
+                                <h4>Remember:</h4>
+                                <p>It's completely normal to feel nervous the first few times. With practice, using a pad becomes quick and easy. Don't hesitate to ask a trusted adult for help if you need it!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Products -->
+            <div class="tab-content" id="products">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title pink">Menstrual Product Comparison</h2>
+                        <p class="card-description">Explore different options to find what works best for you</p>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div>
+                                <i data-lucide="square" class="product-icon"></i>
+                                <h3>Disposable Pads</h3>
+                            </div>
+                            <span class="product-badge">1</span>
+                        </div>
+                        <p class="product-description">Absorbent pads that stick to underwear</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pros</h4>
+                                <ul>
+                                    <li>Easy to use for beginners</li>
+                                    <li>Widely available</li>
+                                    <li>No insertion required</li>
+                                    <li>Good for heavy flow</li>
+                                    <li>Visible flow monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Cons</h4>
+                                <ul>
+                                    <li>Can feel bulky</li>
+                                    <li>May shift during activity</li>
+                                    <li>Creates waste</li>
+                                    <li>Can cause odor if not changed often</li>
+                                    <li>May cause rashes with sensitive skin</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="dollar-sign" class="detail-icon"></i>
+                                    <span class="detail-label">Cost</span>
+                                </div>
+                                <p class="detail-value">Low ($5-15/month)</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="leaf" class="detail-icon"></i>
+                                    <span class="detail-label">Eco-Friendly</span>
+                                </div>
+                                <p class="detail-value">Low</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="clock" class="detail-icon"></i>
+                                    <span class="detail-label">Duration</span>
+                                </div>
+                                <p class="detail-value">4-6 hours</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <span class="detail-label">Availability</span>
+                                </div>
+                                <p class="detail-value">High</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div>
+                                <i data-lucide="circle" class="product-icon"></i>
+                                <h3>Tampons</h3>
+                            </div>
+                            <span class="product-badge">2</span>
+                        </div>
+                        <p class="product-description">Absorbent cylinders inserted into the vagina</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pros</h4>
+                                <ul>
+                                    <li>Discreet and comfortable</li>
+                                    <li>Great for swimming/sports</li>
+                                    <li>No external bulk</li>
+                                    <li>Available in different absorbencies</li>
+                                    <li>Freedom of movement</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Cons</h4>
+                                <ul>
+                                    <li>Insertion learning curve</li>
+                                    <li>Risk of TSS if left too long</li>
+                                    <li>Cannot be used overnight (8+ hours)</li>
+                                    <li>May be uncomfortable for some</li>
+                                    <li>Creates waste</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="dollar-sign" class="detail-icon"></i>
+                                    <span class="detail-label">Cost</span>
+                                </div>
+                                <p class="detail-value">Low-Medium ($8-20/month)</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="leaf" class="detail-icon"></i>
+                                    <span class="detail-label">Eco-Friendly</span>
+                                </div>
+                                <p class="detail-value">Low</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="clock" class="detail-icon"></i>
+                                    <span class="detail-label">Duration</span>
+                                </div>
+                                <p class="detail-value">4-8 hours</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <span class="detail-label">Availability</span>
+                                </div>
+                                <p class="detail-value">High</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div>
+                                <i data-lucide="droplet" class="product-icon"></i>
+                                <h3>Menstrual Cups</h3>
+                            </div>
+                            <span class="product-badge">3</span>
+                        </div>
+                        <p class="product-description">Reusable silicone cups that collect flow</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pros</h4>
+                                <ul>
+                                    <li>Eco-friendly and cost-effective</li>
+                                    <li>Can wear for up to 12 hours</li>
+                                    <li>No toxic shock syndrome risk</li>
+                                    <li>Holds more than tampons/pads</li>
+                                    <li>Lasts for years with proper care</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Cons</h4>
+                                <ul>
+                                    <li>Steeper learning curve</li>
+                                    <li>Requires cleaning and sterilizing</li>
+                                    <li>Initial higher cost</li>
+                                    <li>May be messy to empty</li>
+                                    <li>Not suitable for everyone</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="dollar-sign" class="detail-icon"></i>
+                                    <span class="detail-label">Cost</span>
+                                </div>
+                                <p class="detail-value">High upfront ($20-40), Low long-term</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="leaf" class="detail-icon"></i>
+                                    <span class="detail-label">Eco-Friendly</span>
+                                </div>
+                                <p class="detail-value">Very High</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="clock" class="detail-icon"></i>
+                                    <span class="detail-label">Duration</span>
+                                </div>
+                                <p class="detail-value">Up to 12 hours</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <span class="detail-label">Availability</span>
+                                </div>
+                                <p class="detail-value">Medium</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div>
+                                <i data-lucide="shirt" class="product-icon"></i>
+                                <h3>Period Underwear</h3>
+                            </div>
+                            <span class="product-badge">4</span>
+                        </div>
+                        <p class="product-description">Special underwear with built-in absorbent layers</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pros</h4>
+                                <ul>
+                                    <li>Feels like regular underwear</li>
+                                    <li>No insertion or placement needed</li>
+                                    <li>Reusable and eco-friendly</li>
+                                    <li>Good backup protection</li>
+                                    <li>Comfortable for daily wear</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Cons</h4>
+                                <ul>
+                                    <li>Higher upfront cost</li>
+                                    <li>May not be sufficient for heavy days alone</li>
+                                    <li>Takes time to dry after washing</li>
+                                    <li>Limited styles available</li>
+                                    <li>May feel damp when full</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="dollar-sign" class="detail-icon"></i>
+                                    <span class="detail-label">Cost</span>
+                                </div>
+                                <p class="detail-value">High ($15-40 per pair)</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="leaf" class="detail-icon"></i>
+                                    <span class="detail-label">Eco-Friendly</span>
+                                </div>
+                                <p class="detail-value">High</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <i data-lucide="clock" class="detail-icon"></i>
+                                    <span class="detail-label">Duration</span>
+                                </div>
+                                <p class="detail-value">6-12 hours</p>
+                            </div>
+                            <div class="detail-item">
+                                <div>
+                                    <span class="detail-label">Availability</span>
+                                </div>
+                                <p class="detail-value">Medium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-box">
+                    <h3>Choosing the Right Product for You</h3>
+                    <div class="recommendation-grid">
+                        <div class="recommendation-item">
+                            <h4>For Beginners:</h4>
+                            <p>Start with disposable pads - they're easiest to learn with and widely available.</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>For Active Lifestyles:</h4>
+                            <p>Tampons or menstrual cups offer the most freedom for sports and swimming.</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>For Eco-Conscious:</h4>
+                            <p>Menstrual cups and period underwear are the most environmentally friendly options.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Hygiene -->
+            <div class="tab-content" id="hygiene">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title pink">Menstrual Hygiene Best Practices</h2>
+                        <p class="card-description">Essential hygiene tips to keep you healthy and comfortable during your period</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="hygiene-grid">
+                            <div class="hygiene-section">
+                                <div class="section-header">
+                                    <i data-lucide="droplets" class="section-icon"></i>
+                                    <h3>Daily Care</h3>
+                                </div>
+                                <ul class="hygiene-list">
+                                    <li>Change your pad or tampon every 4-6 hours</li>
+                                    <li>Wash your hands before and after changing products</li>
+                                    <li>Use warm water and mild soap for cleaning</li>
+                                    <li>Always wipe from front to back</li>
+                                    <li>Shower or bathe daily during your period</li>
+                                </ul>
+                            </div>
+
+                            <div class="hygiene-section">
+                                <div class="section-header">
+                                    <i data-lucide="trash-2" class="section-icon"></i>
+                                    <h3>Proper Disposal</h3>
+                                </div>
+                                <ul class="hygiene-list">
+                                    <li>Wrap used pads in toilet paper or their wrapper</li>
+                                    <li>Never flush pads or tampons down the toilet</li>
+                                    <li>Use designated disposal bins when available</li>
+                                    <li>Wash hands after disposing of products</li>
+                                    <li>Keep disposal bags for when bins aren't available</li>
+                                </ul>
+                            </div>
+
+                            <div class="hygiene-section">
+                                <div class="section-header">
+                                    <i data-lucide="shirt" class="section-icon"></i>
+                                    <h3>Clothing & Comfort</h3>
+                                </div>
+                                <ul class="hygiene-list">
+                                    <li>Wear breathable cotton underwear</li>
+                                    <li>Change underwear daily during your period</li>
+                                    <li>Avoid tight-fitting clothes during heavy flow days</li>
+                                    <li>Keep extra underwear and products with you</li>
+                                    <li>Wash period underwear in cold water</li>
+                                </ul>
+                            </div>
+
+                            <div class="hygiene-section">
+                                <div class="section-header">
+                                    <i data-lucide="alert-triangle" class="section-icon"></i>
+                                    <h3>What to Avoid</h3>
+                                </div>
+                                <ul class="hygiene-list">
+                                    <li>Don't use scented products on your vulva</li>
+                                    <li>Avoid douching - it disrupts natural balance</li>
+                                    <li>Don't leave tampons in for more than 8 hours</li>
+                                    <li>Avoid using super absorbent products unnecessarily</li>
+                                    <li>Don't ignore unusual odors or symptoms</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="emergency-box">
+                            <h3>Emergency Kit Essentials</h3>
+                            <div class="kit-items">
+                                <div class="kit-item">
+                                    <i data-lucide="square" class="kit-icon"></i>
+                                    <span>Extra pads/tampons</span>
+                                </div>
+                                <div class="kit-item">
+                                    <i data-lucide="droplets" class="kit-icon"></i>
+                                    <span>Wet wipes</span>
+                                </div>
+                                <div class="kit-item">
+                                    <i data-lucide="shirt" class="kit-icon"></i>
+                                    <span>Spare underwear</span>
+                                </div>
+                                <div class="kit-item">
+                                    <i data-lucide="pill" class="kit-icon"></i>
+                                    <span>Pain relief medication</span>
+                                </div>
+                                <div class="kit-item">
+                                    <i data-lucide="shopping-bag" class="kit-icon"></i>
+                                    <span>Small disposal bags</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Health Info -->
+            <div class="tab-content" id="health">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title pink">Why Menstrual Hygiene Matters</h2>
+                        <p class="card-description">Understanding the importance of cleanliness during your menstrual cycle</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="health-grid">
+                            <div class="health-section">
+                                <h3 class="section-title purple">Health Benefits</h3>
+                                <ul class="benefit-list">
+                                    <li><span class="bullet">•</span><span>Prevents bacterial and fungal infections</span></li>
+                                    <li><span class="bullet">•</span><span>Reduces risk of urinary tract infections (UTIs)</span></li>
+                                    <li><span class="bullet">•</span><span>Prevents toxic shock syndrome (TSS)</span></li>
+                                    <li><span class="bullet">•</span><span>Maintains healthy pH balance</span></li>
+                                </ul>
+                            </div>
+                            <div class="health-section">
+                                <h3 class="section-title purple">Comfort & Confidence</h3>
+                                <ul class="benefit-list">
+                                    <li><span class="bullet">•</span><span>Eliminates unpleasant odors</span></li>
+                                    <li><span class="bullet">•</span><span>Prevents skin irritation and rashes</span></li>
+                                    <li><span class="bullet">•</span><span>Allows you to stay active and social</span></li>
+                                    <li><span class="bullet">•</span><span>Boosts overall well-being</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="overall-health-box">
+                            <h3>Connection to Overall Health</h3>
+                            <p>Your menstrual health is closely linked to your overall well-being. Good hygiene habits during your period help:</p>
+                            <ul>
+                                <li>• Maintain your body's natural defense systems</li>
+                                <li>• Support your immune system</li>
+                                <li>• Promote better sleep and mood</li>
+                                <li>• Build healthy lifelong habits</li>
+                            </ul>
+                        </div>
+
+                        <div class="warning-box">
+                            <h4>Warning Signs to Watch For:</h4>
+                            <p>See a healthcare provider if you experience: severe pain, very heavy bleeding, strong or fishy odors, fever, or unusual discharge. These could be signs of infection or other conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Anatomy -->
+            <div class="tab-content" id="anatomy">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title purple">Understanding Your Reproductive System</h2>
+                        <p class="card-description">Learn about the anatomy and science behind menstruation</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="anatomy-section">
+                            <h3>Female Reproductive System</h3>
+                            <div class="anatomy-grid">
+                                <div class="anatomy-diagram">
+                                    <img src="./anatomy-diagram.jpg" alt="Female Reproductive System Anatomy Diagram" class="diagram-image">
+                                    <!-- Fallback for when image is not available -->
+                                    <div class="diagram-fallback">
+                                        <i data-lucide="info" class="diagram-icon"></i>
+                                        <p>Anatomical Diagram</p>
+                                        <p class="diagram-note">Add your anatomy diagram as "anatomy-diagram.jpg"</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="organ-functions">
+                                    <h4>Organ Functions</h4>
+                                    <div class="organ-list">
+                                        <div class="organ">
+                                            <h5>Uterus</h5>
+                                            <p>A pear-shaped organ where a baby can grow. The inner lining (endometrium) thickens each month and is shed during menstruation if pregnancy doesn't occur.</p>
+                                        </div>
+                                        <div class="organ">
+                                            <h5>Ovaries</h5>
+                                            <p>Two small organs that store eggs and produce hormones like estrogen and progesterone. They release one egg each month during ovulation.</p>
+                                        </div>
+                                        <div class="organ">
+                                            <h5>Fallopian Tubes</h5>
+                                            <p>Tubes that connect the ovaries to the uterus. The egg travels through these tubes after being released from the ovary.</p>
+                                        </div>
+                                        <div class="organ">
+                                            <h5>Cervix</h5>
+                                            <p>The narrow lower part of the uterus that connects to the vagina. It produces mucus that changes throughout your cycle.</p>
+                                        </div>
+                                        <div class="organ">
+                                            <h5>Vagina</h5>
+                                            <p>A muscular tube that connects the cervix to the outside of the body. This is where menstrual blood flows out.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="anatomy-section">
+                            <h3>The Menstrual Cycle</h3>
+                            <p>The menstrual cycle is a natural process that prepares your body for the possibility of pregnancy each month. It typically lasts 28 days but can range from 21-35 days.</p>
+                            
+                            <div class="cycle-phases">
+                                <div class="phase">
+                                    <h4>Days 1-5: Menstruation</h4>
+                                    <p>The lining of the uterus (endometrium) is shed through the vagina. This is your period.</p>
+                                </div>
+                                <div class="phase">
+                                    <h4>Days 1-13: Follicular Phase</h4>
+                                    <p>Your body prepares to release an egg. Hormones signal the ovaries to prepare an egg for release.</p>
+                                </div>
+                                <div class="phase">
+                                    <h4>Day 14: Ovulation</h4>
+                                    <p>A mature egg is released from the ovary and travels down the fallopian tube.</p>
+                                </div>
+                                <div class="phase">
+                                    <h4>Days 15-28: Luteal Phase</h4>
+                                    <p>The uterine lining thickens in preparation for a possible pregnancy. If pregnancy doesn't occur, the cycle begins again.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="key-organs">
+                            <h3>Key Reproductive Organs</h3>
+                            <div class="organs-grid">
+                                <div class="organ">
+                                    <h4>Ovaries</h4>
+                                    <p>Two small organs that store and release eggs, and produce hormones like estrogen and progesterone.</p>
+                                </div>
+                                <div class="organ">
+                                    <h4>Fallopian Tubes</h4>
+                                    <p>Two tubes that connect the ovaries to the uterus. This is where fertilization typically occurs.</p>
+                                </div>
+                                <div class="organ">
+                                    <h4>Uterus</h4>
+                                    <p>A pear-shaped organ where a fertilized egg can develop. Its lining sheds during menstruation.</p>
+                                </div>
+                                <div class="organ">
+                                    <h4>Cervix</h4>
+                                    <p>The lower part of the uterus that opens into the vagina. It produces mucus that changes throughout your cycle.</p>
+                                </div>
+                                <div class="organ">
+                                    <h4>Vagina</h4>
+                                    <p>A muscular canal that connects the cervix to the outside of the body. Menstrual fluid exits through here.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hormones-box">
+                            <h3>Important Hormones</h3>
+                            <ul>
+                                <li><strong>Estrogen:</strong> Helps build up the uterine lining and regulates the menstrual cycle</li>
+                                <li><strong>Progesterone:</strong> Maintains the uterine lining and prepares it for pregnancy</li>
+                                <li><strong>FSH (Follicle Stimulating Hormone):</strong> Stimulates egg development in the ovaries</li>
+                                <li><strong>LH (Luteinizing Hormone):</strong> Triggers ovulation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Q&A -->
+            <div class="tab-content" id="qa">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title purple">Ask a Doctor - Q&A with Dr. Vani Venkatachalam</h2>
+                        <p class="card-description">Common questions answered by a pediatrician specializing in adolescent health</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="qa-section">
+                            <div class="qa-item">
+                                <h3 class="question">Q: At what age do most girls get their first period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Most girls get their first period between ages 10-15, with the average being around 12-13 years old. It's completely normal for it to happen earlier or later than this range.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: How much bleeding is normal during a period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Normal period flow varies greatly between individuals. Generally, losing 30-40ml of fluid over 3-7 days is typical. If you're changing your pad or tampon every hour for several hours, consult a healthcare provider.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: Is it normal to have irregular periods when you first start?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, it's very normal! It can take 1-2 years for your menstrual cycle to become regular after your first period. Your body is still learning and adjusting to hormonal changes.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: What can I do about menstrual cramps?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Mild to moderate cramps are normal. Try heat therapy, gentle exercise, over-the-counter pain relievers (with parent permission), and relaxation techniques. Severe pain that interferes with daily activities should be evaluated by a doctor.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: Can I swim or exercise during my period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Absolutely! Physical activity can actually help reduce cramps and improve mood. For swimming, tampons or menstrual cups work best. Listen to your body and rest if needed.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: When should I see a doctor about my period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Consult a healthcare provider if you experience: periods lasting longer than 7 days, extremely heavy bleeding, severe pain, periods more frequent than every 21 days or less frequent than every 35 days after the first year, or any concerning symptoms.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: Is it normal to feel emotional before or during my period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, hormonal changes can affect mood. Many people experience mood swings, irritability, or feeling more emotional. However, if these feelings significantly impact your daily life, it's worth discussing with a healthcare provider.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: What foods should I eat during my period?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Focus on iron-rich foods (leafy greens, lean meats), calcium sources (dairy, fortified foods), and plenty of water. Limit excessive caffeine and sugar, which can worsen mood swings and cramps.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: How do I know if I have a menstrual disorder?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Warning signs include: no period by age 16, periods stopping for 3+ months without pregnancy, bleeding between periods, periods lasting more than 7 days, or pain so severe it interferes with daily activities.</p>
+                            </div>
+
+                            <div class="qa-item">
+                                <h3 class="question">Q: Can stress affect my menstrual cycle?</h3>
+                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, stress can significantly impact your cycle, causing periods to be late, early, heavier, lighter, or even skipped. Managing stress through healthy coping strategies can help regulate your cycle.</p>
+                            </div>
+                        </div>
+
+                        <div class="doctor-note">
+                            <div class="note-header">
+                                <i data-lucide="stethoscope" class="note-icon"></i>
+                                <h3>A Note from Dr. Venkatachalam</h3>
+                            </div>
+                            <p>"Remember, every person's menstrual experience is unique. Don't hesitate to ask questions and seek help when needed. Your menstrual health is an important part of your overall well-being, and there's no question too small or embarrassing to ask a healthcare provider."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</body>
+</html>
