@@ -12,7 +12,7 @@
     <!-- Girl Scouts Logo in corner -->
     <div class="girl-scouts-logo">
         <div class="logo-container">
-            <img src="https://images.unsplash.com/photo-1587653394453-7692616605ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnaXJsJTIwc2NvdXRzJTIwbG9nbyUyMGJhZGdlfGVufDF8fHx8MTc1NTM4OTExNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Girl Scouts Logo" />
+            <img src="./girl-scouts-logo.png.png" alt="Girl Scouts Logo" />
         </div>
         <p class="logo-text">Girl Scouts Gold Award</p>
     </div>
@@ -55,8 +55,7 @@
                         <div class="card-content">
                             <div class="video-placeholder">
                                 <video controls class="video-element">
-                                    <source src="./pad-demonstration-video.mp4" type="video/mp4">
-                                    <source src="./pad-demonstration-video.webm" type="video/webm">
+                                    <source src="./demo.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 
@@ -69,9 +68,8 @@
                                             <i data-lucide="info" class="info-icon"></i>
                                             <div class="info-text">
                                                 <p><strong>To add your video:</strong></p>
-                                                <p>1. Save your video as "pad-demonstration-video.mp4"</p>
+                                                <p>1. Save your video as "demo.mp4"</p>
                                                 <p>2. Place it in the same folder as index.html</p>
-                                                <p>3. Optionally add a thumbnail as "video-thumbnail.jpg"</p>
                                             </div>
                                         </div>
                                     </div>
@@ -577,105 +575,167 @@
                         <p class="card-description">Learn about the anatomy and science behind menstruation</p>
                     </div>
                     <div class="card-content">
-                        <div class="anatomy-section">
-                            <h3>Female Reproductive System</h3>
-                            <div class="anatomy-grid">
-                                <div class="anatomy-diagram">
-                                    <img src="./anatomy-diagram.jpg" alt="Female Reproductive System Anatomy Diagram" class="diagram-image">
-                                    <!-- Fallback for when image is not available -->
-                                    <div class="diagram-fallback">
-                                        <i data-lucide="info" class="diagram-icon"></i>
-                                        <p>Anatomical Diagram</p>
-                                        <p class="diagram-note">Add your anatomy diagram as "anatomy-diagram.jpg"</p>
+                        <!-- Sub-tabs for Anatomy section -->
+                        <div class="anatomy-subtabs">
+                            <button class="anatomy-subtab active" data-subtab="anatomy-diagram">
+                                <i data-lucide="activity" class="subtab-icon"></i>
+                                <span>Anatomy</span>
+                            </button>
+                            <button class="anatomy-subtab" data-subtab="menstrual-cycle">
+                                <i data-lucide="calendar" class="subtab-icon"></i>
+                                <span>Menstrual Cycle</span>
+                            </button>
+                            <button class="anatomy-subtab" data-subtab="hormones">
+                                <i data-lucide="zap" class="subtab-icon"></i>
+                                <span>Hormones</span>
+                            </button>
+                        </div>
+
+                        <!-- Sub-tab Content: Anatomy Diagram -->
+                        <div class="anatomy-subcontent active" id="anatomy-diagram">
+                            <div class="anatomy-section">
+                                <h3>Female Reproductive System</h3>
+                                <div class="anatomy-grid">
+                                    <div class="anatomy-diagram">
+                                        <figure>
+                                            <img src="./anatomy-diagram.png.png" alt="Female Reproductive System Anatomy Diagram" class="diagram-image">
+                                            <figcaption>Diagram of the female reproductive system. <a href="https://www.plannedparenthood.org/learn/health-and-wellness/reproductive-system" target="_blank" rel="noopener noreferrer">Source: Planned Parenthood</a></figcaption>
+                                        </figure>
+                                        <!-- Fallback for when image is not available -->
+                                        <div class="diagram-fallback">
+                                            <i data-lucide="info" class="diagram-icon"></i>
+                                            <p>Anatomical Diagram</p>
+                                            <p class="diagram-note">Add your anatomy diagram as "anatomy-diagram.png.png"</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="organ-functions">
+                                        <h4>Organ Functions</h4>
+                                        <div class="organ-list">
+                                            <div class="organ">
+                                                <h5>Uterus</h5>
+                                                <p>A pear-shaped organ where a baby can grow. The inner lining (endometrium) thickens each month and is shed during menstruation if pregnancy doesn't occur.</p>
+                                            </div>
+                                            <div class="organ">
+                                                <h5>Ovaries</h5>
+                                                <p>Two small organs that store eggs and produce hormones like estrogen and progesterone. They release one egg each month during ovulation.</p>
+                                            </div>
+                                            <div class="organ">
+                                                <h5>Fallopian Tubes</h5>
+                                                <p>Tubes that connect the ovaries to the uterus. The egg travels through these tubes after being released from the ovary.</p>
+                                            </div>
+                                            <div class="organ">
+                                                <h5>Cervix</h5>
+                                                <p>The narrow lower part of the uterus that connects to the vagina. It produces mucus that changes throughout your cycle.</p>
+                                            </div>
+                                            <div class="organ">
+                                                <h5>Vagina</h5>
+                                                <p>A muscular tube that connects the cervix to the outside of the body. This is where menstrual blood flows out.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub-tab Content: Menstrual Cycle -->
+                        <div class="anatomy-subcontent" id="menstrual-cycle">
+                            <div class="anatomy-section">
+                                <h3>The Menstrual Cycle</h3>
+                                <p class="cycle-intro">Understanding the phases of your monthly cycle</p>
                                 
-                                <div class="organ-functions">
-                                    <h4>Organ Functions</h4>
-                                    <div class="organ-list">
-                                        <div class="organ">
-                                            <h5>Uterus</h5>
-                                            <p>A pear-shaped organ where a baby can grow. The inner lining (endometrium) thickens each month and is shed during menstruation if pregnancy doesn't occur.</p>
+                                <div class="cycle-phases">
+                                    <div class="phase">
+                                        <h4>Menstruation</h4>
+                                        <p class="phase-days">Days 1-5</p>
+                                        <p>The uterine lining sheds, resulting in menstrual bleeding. This is the first day of your cycle.</p>
+                                    </div>
+                                    <div class="phase">
+                                        <h4>Follicular Phase</h4>
+                                        <p class="phase-days">Days 1-13</p>
+                                        <p>Hormones signal the ovaries to prepare an egg for release. The uterine lining begins to thicken again.</p>
+                                    </div>
+                                    <div class="phase">
+                                        <h4>Ovulation</h4>
+                                        <p class="phase-days">Around Day 14</p>
+                                        <p>A mature egg is released from the ovary and travels down the fallopian tube.</p>
+                                    </div>
+                                    <div class="phase">
+                                        <h4>Luteal Phase</h4>
+                                        <p class="phase-days">Days 15-28</p>
+                                        <p>If the egg isn't fertilized, hormone levels drop and the cycle prepares to start over.</p>
+                                    </div>
+                                </div>
+
+                                <div class="important-notes">
+                                    <h4>Important Notes:</h4>
+                                    <ul>
+                                        <li>Cycle length can vary from 21-35 days (28 days is average)</li>
+                                        <li>It's normal for cycles to be irregular when you first start</li>
+                                        <li>Every person's cycle is unique to them</li>
+                                        <li>Tracking your cycle can help you understand your patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub-tab Content: Hormones -->
+                        <div class="anatomy-subcontent" id="hormones">
+                            <div class="anatomy-section">
+                                <h3>Hormones and Your Cycle</h3>
+                                <p class="hormones-intro">How hormones control your menstrual cycle and affect how you feel</p>
+                                
+                                <div class="hormones-grid">
+                                    <div class="hormone-card">
+                                        <h4>Estrogen</h4>
+                                        <p class="hormone-description">Builds up the uterine lining and is highest just before ovulation.</p>
+                                        <p class="hormone-effects"><strong>Effects:</strong> Increased energy, better mood, clearer skin</p>
+                                    </div>
+                                    <div class="hormone-card">
+                                        <h4>Progesterone</h4>
+                                        <p class="hormone-description">Maintains the uterine lining after ovulation. Drops if pregnancy doesn't occur.</p>
+                                        <p class="hormone-effects"><strong>Effects:</strong> Can cause bloating, breast tenderness, mood changes</p>
+                                    </div>
+                                    <div class="hormone-card">
+                                        <h4>FSH & LH</h4>
+                                        <p class="hormone-description">Brain hormones that signal the ovaries to prepare and release eggs.</p>
+                                        <p class="hormone-effects"><strong>Effects:</strong> Control the timing of your cycle</p>
+                                    </div>
+                                </div>
+
+                                <div class="hormonal-management">
+                                    <h4>Managing Hormonal Changes:</h4>
+                                    <ul>
+                                        <li>Track your cycle to predict how you might feel</li>
+                                        <li>Eat nutritious foods and stay hydrated</li>
+                                        <li>Get enough sleep, especially during your period</li>
+                                        <li>Exercise regularly to help balance hormones</li>
+                                        <li>Practice stress management techniques</li>
+                                    </ul>
+                                </div>
+
+                                <div class="weekly-breakdown">
+                                    <h4>How Hormones Affect You</h4>
+                                    <div class="week-cards">
+                                        <div class="week-card week-1">
+                                            <h5>Week 1 (Period)</h5>
+                                            <p>Lower energy, need for rest, cramps possible</p>
                                         </div>
-                                        <div class="organ">
-                                            <h5>Ovaries</h5>
-                                            <p>Two small organs that store eggs and produce hormones like estrogen and progesterone. They release one egg each month during ovulation.</p>
+                                        <div class="week-card week-2">
+                                            <h5>Week 2 (Pre-ovulation)</h5>
+                                            <p>Rising energy, better mood, increased confidence</p>
                                         </div>
-                                        <div class="organ">
-                                            <h5>Fallopian Tubes</h5>
-                                            <p>Tubes that connect the ovaries to the uterus. The egg travels through these tubes after being released from the ovary.</p>
+                                        <div class="week-card week-3">
+                                            <h5>Week 3 (Post-ovulation)</h5>
+                                            <p>Peak energy, then gradual decline</p>
                                         </div>
-                                        <div class="organ">
-                                            <h5>Cervix</h5>
-                                            <p>The narrow lower part of the uterus that connects to the vagina. It produces mucus that changes throughout your cycle.</p>
-                                        </div>
-                                        <div class="organ">
-                                            <h5>Vagina</h5>
-                                            <p>A muscular tube that connects the cervix to the outside of the body. This is where menstrual blood flows out.</p>
+                                        <div class="week-card week-4">
+                                            <h5>Week 4 (Pre-period)</h5>
+                                            <p>PMS symptoms, mood changes, cravings</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="anatomy-section">
-                            <h3>The Menstrual Cycle</h3>
-                            <p>The menstrual cycle is a natural process that prepares your body for the possibility of pregnancy each month. It typically lasts 28 days but can range from 21-35 days.</p>
-                            
-                            <div class="cycle-phases">
-                                <div class="phase">
-                                    <h4>Days 1-5: Menstruation</h4>
-                                    <p>The lining of the uterus (endometrium) is shed through the vagina. This is your period.</p>
-                                </div>
-                                <div class="phase">
-                                    <h4>Days 1-13: Follicular Phase</h4>
-                                    <p>Your body prepares to release an egg. Hormones signal the ovaries to prepare an egg for release.</p>
-                                </div>
-                                <div class="phase">
-                                    <h4>Day 14: Ovulation</h4>
-                                    <p>A mature egg is released from the ovary and travels down the fallopian tube.</p>
-                                </div>
-                                <div class="phase">
-                                    <h4>Days 15-28: Luteal Phase</h4>
-                                    <p>The uterine lining thickens in preparation for a possible pregnancy. If pregnancy doesn't occur, the cycle begins again.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="key-organs">
-                            <h3>Key Reproductive Organs</h3>
-                            <div class="organs-grid">
-                                <div class="organ">
-                                    <h4>Ovaries</h4>
-                                    <p>Two small organs that store and release eggs, and produce hormones like estrogen and progesterone.</p>
-                                </div>
-                                <div class="organ">
-                                    <h4>Fallopian Tubes</h4>
-                                    <p>Two tubes that connect the ovaries to the uterus. This is where fertilization typically occurs.</p>
-                                </div>
-                                <div class="organ">
-                                    <h4>Uterus</h4>
-                                    <p>A pear-shaped organ where a fertilized egg can develop. Its lining sheds during menstruation.</p>
-                                </div>
-                                <div class="organ">
-                                    <h4>Cervix</h4>
-                                    <p>The lower part of the uterus that opens into the vagina. It produces mucus that changes throughout your cycle.</p>
-                                </div>
-                                <div class="organ">
-                                    <h4>Vagina</h4>
-                                    <p>A muscular canal that connects the cervix to the outside of the body. Menstrual fluid exits through here.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="hormones-box">
-                            <h3>Important Hormones</h3>
-                            <ul>
-                                <li><strong>Estrogen:</strong> Helps build up the uterine lining and regulates the menstrual cycle</li>
-                                <li><strong>Progesterone:</strong> Maintains the uterine lining and prepares it for pregnancy</li>
-                                <li><strong>FSH (Follicle Stimulating Hormone):</strong> Stimulates egg development in the ovaries</li>
-                                <li><strong>LH (Luteinizing Hormone):</strong> Triggers ovulation</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -689,62 +749,212 @@
                         <p class="card-description">Common questions answered by a pediatrician specializing in adolescent health</p>
                     </div>
                     <div class="card-content">
-                        <div class="qa-section">
+                        <div class="qa-accordion">
                             <div class="qa-item">
-                                <h3 class="question">Q: At what age do most girls get their first period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Most girls get their first period between ages 10-15, with the average being around 12-13 years old. It's completely normal for it to happen earlier or later than this range.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Why are my periods so different from my friends?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Every girl's body is different. Some have shorter periods than others; some bleed less and some bleed more. Go to the doctor if your period is excessively painful, if it lasts longer than seven days or makes you skip school. These are signs of a hormonal imbalance or excessive menstrual bleeding.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: How much bleeding is normal during a period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Normal period flow varies greatly between individuals. Generally, losing 30-40ml of fluid over 3-7 days is typical. If you're changing your pad or tampon every hour for several hours, consult a healthcare provider.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Is it bad if I skip a month sometimes?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Period skipping is normal, especially for the first few years. Your body is still adjusting to it all. Still, if you miss for several months or experience accompanying symptoms like a weight change or hirsutism, it wouldn't hurt to see a physician.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: Is it normal to have irregular periods when you first start?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, it's very normal! It can take 1-2 years for your menstrual cycle to become regular after your first period. Your body is still learning and adjusting to hormonal changes.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Why does my mood get really bad before my period?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> This is probably premenstrual syndrome or PMS. Right before your period, your hormones drop and this may cause sadness, anger, anxiety. You can try journaling, talking to someone, and light exercise such as walking or stretching. If you're concerned, mention it to a physician; it could be PMDD which is a more extreme situation, but something that can be treated.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: What can I do about menstrual cramps?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Mild to moderate cramps are normal. Try heat therapy, gentle exercise, over-the-counter pain relievers (with parent permission), and relaxation techniques. Severe pain that interferes with daily activities should be evaluated by a doctor.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>I feel super tired during my period. Is that normal?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Yes, that is normal. You're losing blood and your body's working overtime. Make sure you eat iron-rich foods (beans, leafy greens, fortified cereals) and hydrate. However, if you feel faint or lightheaded frequently, a physician might check your blood iron status.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: Can I swim or exercise during my period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Absolutely! Physical activity can actually help reduce cramps and improve mood. For swimming, tampons or menstrual cups work best. Listen to your body and rest if needed.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Sometimes I get clumps or clots in my blood—is that bad?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Small clots can be normal (dime-sized or smaller). Blood gets old and you're shedding pieces of tissue. If you constantly pass large clots, however, or find yourself soaking pads in minutes, see a doctor as this can mean excessive menstrual bleeding.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: When should I see a doctor about my period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Consult a healthcare provider if you experience: periods lasting longer than 7 days, extremely heavy bleeding, severe pain, periods more frequent than every 21 days or less frequent than every 35 days after the first year, or any concerning symptoms.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Am I able to swim or participate in sports on my period?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Yes. You shouldn't allow your period to hold you back from anything. Swimming is made easier with tampons or menstrual cups, and it's no issue to use a pad for other things. Even cramping can be relieved by exercise.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: Is it normal to feel emotional before or during my period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, hormonal changes can affect mood. Many people experience mood swings, irritability, or feeling more emotional. However, if these feelings significantly impact your daily life, it's worth discussing with a healthcare provider.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Why am I sometimes left with an odour when I am on my period?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Some smell is okay, it's just blood and normal bacteria. But if they smell really strong, it could be a sign of an illness or if your pad has not been changed often enough. Consult a doctor if the smell is pungent or fishy, and attempt to switch the pads on a regular basis.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: What foods should I eat during my period?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Focus on iron-rich foods (leafy greens, lean meats), calcium sources (dairy, fortified foods), and plenty of water. Limit excessive caffeine and sugar, which can worsen mood swings and cramps.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Is it okay to be embarrassed to have my period?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Totally normal, but you don't have to be. Every girl gets their period, and it's a normal and healthy part of life. Talking about it makes the stigma smaller.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: How do I know if I have a menstrual disorder?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Warning signs include: no period by age 16, periods stopping for 3+ months without pregnancy, bleeding between periods, periods lasting more than 7 days, or pain so severe it interferes with daily activities.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>What do I do if I don't have any pads or tampons—what can I use?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> They can be used with soft, clean towels folded thick enough to soak up flow, like cotton cloth or worn-out T-shirts. Keep them clean in a clean bag after washing them with soap and water and, if possible at all, drying out in the sun. This is referred to as the use of reused cloth pads, and done the right way, it's safe.</p>
+                                </div>
                             </div>
 
                             <div class="qa-item">
-                                <h3 class="question">Q: Can stress affect my menstrual cycle?</h3>
-                                <p class="answer"><strong>Dr. Venkatachalam:</strong> Yes, stress can significantly impact your cycle, causing periods to be late, early, heavier, lighter, or even skipped. Managing stress through healthy coping strategies can help regulate your cycle.</p>
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>How do I stay clean if I cannot shower every day?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Gently wash your private area from the front to the back with a clean, wet cloth saturated with water once or twice a day. Wash only the outside. Wearing pantyhose or underwear made of a breathable material is also useful.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>How do I keep the same cloth or pad on all day?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Change it every 6 to 8 hours if at all possible. To minimize irritation, fold over a fresh layer of cloth over the soiled one if you can't. Wash or rinse as soon as you can. Having one pad on for extended periods can lead to infection or rash.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>What do I do if I lack products or am too shy to ask?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Free period products are available at some schools, community centers, shelters, and even food pantries; these are usually low-key and not judged. You may be able to receive assistance from a teacher, school nurse, or other adult if you are comfortable with them. Many others want to help.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Why do my cramps worsen some months?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Cramps happen when your uterus muscles contract to shed its lining. Other times your stress or hormonal level may make them worse. You can relieve them with exercise, a heat pack, and hydration. If cramps force you to vomit or miss school regularly, that's not normal—see a doctor.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Why do I get bloated or puffy before my period?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> The hormonal changes cause water retention in your body. It is temporary. Drinking water and reducing super salty foods can help.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>What do I do if my period bleeds through my clothes at school?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> It happens to us all. If you can, wrap a sweatshirt around your waist and go pee to change your pad or insert additional toilet paper temporarily. If you can, bring an additional set of underwear with you.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>Is it wrong that I use toilet paper instead of a pad for a while?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> It's okay as an extremely short-term solution, but it will not absorb well and will deteriorate. Change it often and switch to a pad or clean cloth as quickly as possible.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>What if I don't have a location where I can change my pad or cloth in private?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Try to make arrangements for times when you can have some privacy, even if just for a few minutes. Public restrooms, school nurse's offices, or even standing in an alleyway with a friend standing guard can help.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>How do I avoid rashes when changing isn't an option?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> If you can't change your pad often, putting a thin layer of petroleum jelly (if you have it) onto the skin will reduce friction. Wearing loose clothes also facilitates air circulation.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>What if I can't wash my hands before or after changing?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> If you can't access soap and water, at least apply hand sanitizer before and after. If you can't have those, try to touch only the clean side of pads or cloths and wash as soon as possible after.</p>
+                                </div>
+                            </div>
+
+                            <div class="qa-item">
+                                <button class="qa-question" aria-expanded="false">
+                                    <span>How do I keep my reusable cloths clean if I don't have the ability to dry them in the sun?</span>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="qa-answer">
+                                    <p><strong>Dr. Vani Venkatachalam of Care & Cure Pediatrics:</strong> Sunlight is most effective in killing bacteria, but if that is not available, dry them in the cleanest, driest spot you can think of—such as hanging them in a well-ventilated area. Dry them thoroughly before reusing to prevent infections.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="doctor-note">
                             <div class="note-header">
                                 <i data-lucide="stethoscope" class="note-icon"></i>
-                                <h3>A Note from Dr. Venkatachalam</h3>
+                                <h3>A Note from Dr. Vani Venkatachalam</h3>
                             </div>
                             <p>"Remember, every person's menstrual experience is unique. Don't hesitate to ask questions and seek help when needed. Your menstrual health is an important part of your overall well-being, and there's no question too small or embarrassing to ask a healthcare provider."</p>
                         </div>

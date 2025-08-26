@@ -40,6 +40,63 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial active tab (demo)
     switchTab('demo');
     
+    // Anatomy Sub-tabs functionality
+    const anatomySubtabs = document.querySelectorAll('.anatomy-subtab');
+    const anatomySubcontents = document.querySelectorAll('.anatomy-subcontent');
+    
+    function switchAnatomySubtab(targetSubtab) {
+        // Remove active class from all sub-tabs and sub-contents
+        anatomySubtabs.forEach(subtab => subtab.classList.remove('active'));
+        anatomySubcontents.forEach(subcontent => subcontent.classList.remove('active'));
+        
+        // Add active class to clicked sub-tab
+        const clickedSubtab = document.querySelector(`[data-subtab="${targetSubtab}"]`);
+        if (clickedSubtab) {
+            clickedSubtab.classList.add('active');
+        }
+        
+        // Show corresponding sub-content
+        const targetSubcontent = document.getElementById(targetSubtab);
+        if (targetSubcontent) {
+            targetSubcontent.classList.add('active');
+        }
+    }
+    
+    // Add click event listeners to anatomy sub-tabs
+    anatomySubtabs.forEach(subtab => {
+        subtab.addEventListener('click', function() {
+            const targetSubtab = this.getAttribute('data-subtab');
+            switchAnatomySubtab(targetSubtab);
+        });
+    });
+    
+    // Q&A Accordion functionality
+    const qaQuestions = document.querySelectorAll('.qa-question');
+    
+    qaQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const answer = this.nextElementSibling;
+            
+            // Close all other answers
+            qaQuestions.forEach(q => {
+                if (q !== this) {
+                    q.setAttribute('aria-expanded', 'false');
+                    q.nextElementSibling.classList.remove('active');
+                }
+            });
+            
+            // Toggle current answer
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                answer.classList.remove('active');
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                answer.classList.add('active');
+            }
+        });
+    });
+    
     // Smooth scrolling for better UX
     document.documentElement.style.scrollBehavior = 'smooth';
     
@@ -98,24 +155,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                const target = mutation.target;
-                if (target.classList.contains('tab-content') && target.classList.contains('active')) {
-                    target.style.opacity = '0';
-                    target.style.transform = 'translateY(10px)';
+                // Add fade-in effect for newly active content
+                if (mutation.target.classList.contains('active')) {
+                    mutation.target.style.opacity = '0';
+                    mutation.target.style.transform = 'translateY(10px)';
                     
-                    // Force reflow
-                    target.offsetHeight;
-                    
-                    target.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    target.style.opacity = '1';
-                    target.style.transform = 'translateY(0)';
+                    setTimeout(() => {
+                        mutation.target.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        mutation.target.style.opacity = '1';
+                        mutation.target.style.transform = 'translateY(0)';
+                    }, 50);
                 }
             }
         });
     });
     
+    // Observe all tab contents for class changes
     tabContents.forEach(content => {
-        observer.observe(content, { attributes: true, attributeFilter: ['class'] });
+        observer.observe(content, { attributes: true });
     });
     
     // Console log for debugging
