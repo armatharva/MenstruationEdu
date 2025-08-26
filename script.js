@@ -6,6 +6,26 @@ document.addEventListener('DOMContentLoaded', function() {
         lucide.createIcons();
     }
     
+    // Check if video element exists and handle it
+    const videoElement = document.querySelector('.video-element');
+    if (videoElement) {
+        // Hide fallback when video loads
+        videoElement.addEventListener('loadeddata', function() {
+            const fallback = document.querySelector('.video-fallback');
+            if (fallback) {
+                fallback.style.display = 'none';
+            }
+        });
+        
+        // Show fallback if video fails to load
+        videoElement.addEventListener('error', function() {
+            const fallback = document.querySelector('.video-fallback');
+            if (fallback) {
+                fallback.style.display = 'flex';
+            }
+        });
+    }
+    
     // Tab functionality
     const tabTriggers = document.querySelectorAll('.tab-trigger');
     const tabContents = document.querySelectorAll('.tab-content');
