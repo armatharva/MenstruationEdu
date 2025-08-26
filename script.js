@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if video element exists and handle it
     const videoElement = document.querySelector('.video-element');
     if (videoElement) {
+        // Preload video data
+        videoElement.preload = 'auto';
+        
         // Hide fallback when video loads
         videoElement.addEventListener('loadeddata', function() {
             const fallback = document.querySelector('.video-fallback');
@@ -23,6 +26,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (fallback) {
                 fallback.style.display = 'flex';
             }
+        });
+        
+        // Handle video loading progress
+        videoElement.addEventListener('loadstart', function() {
+            console.log('Video loading started');
+        });
+        
+        videoElement.addEventListener('canplay', function() {
+            console.log('Video can start playing');
+        });
+        
+        videoElement.addEventListener('canplaythrough', function() {
+            console.log('Video can play through without stopping');
         });
     }
     
