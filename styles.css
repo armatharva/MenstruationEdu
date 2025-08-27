@@ -238,7 +238,7 @@ p {
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--gray-700);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -253,7 +253,7 @@ p {
 .tab-trigger.active {
   background: var(--pink-500);
   color: white;
-  font-weight: 800;
+  font-weight: 900;
   box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
 }
 
@@ -1200,7 +1200,7 @@ p {
     padding: 1rem 1.5rem;
     border-radius: var(--radius);
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--muted-foreground);
     transition: all 0.2s ease;
     display: flex;
@@ -1223,7 +1223,7 @@ p {
     color: var(--purple-600);
     background-color: var(--purple-50);
     border: 1px solid var(--purple-200);
-    font-weight: 800;
+    font-weight: 900;
     box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
 }
 
@@ -1468,7 +1468,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--foreground);
     transition: all 0.2s ease;
     font-size: 1rem;
