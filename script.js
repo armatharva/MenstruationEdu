@@ -109,10 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Q&A Accordion functionality
     const qaQuestions = document.querySelectorAll('.qa-question');
     
-    qaQuestions.forEach(question => {
+    console.log('Found Q&A questions:', qaQuestions.length);
+    
+    qaQuestions.forEach((question, index) => {
+        console.log(`Q&A ${index + 1}:`, question.textContent.trim());
+        
         question.addEventListener('click', function() {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             const answer = this.nextElementSibling;
+            
+            console.log('Q&A clicked:', this.textContent.trim());
+            console.log('Answer element:', answer);
+            console.log('Answer classes:', answer.className);
+            console.log('Current state:', isExpanded);
             
             // Close all other answers
             qaQuestions.forEach(q => {
@@ -126,9 +135,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (isExpanded) {
                 this.setAttribute('aria-expanded', 'false');
                 answer.classList.remove('active');
+                console.log('Closing answer');
             } else {
                 this.setAttribute('aria-expanded', 'true');
                 answer.classList.add('active');
+                console.log('Opening answer, added active class');
+                console.log('Answer classes after adding active:', answer.className);
             }
         });
     });
