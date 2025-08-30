@@ -1571,3 +1571,30 @@ p {
   border-left: 3px solid #0077cc;
   margin-bottom: 10px;
 }
+/* Q&A Styles */
+.qa-question {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.qa-question:hover {
+  background: #f0f0f0;
+}
+
+.qa-answer {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid #0077cc;
+  margin-bottom: 10px;
+}
+
