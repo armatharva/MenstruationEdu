@@ -215,3 +215,23 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('MenstruationEdu website initialized successfully!');
     console.log('Available tabs:', Array.from(tabTriggers).map(t => t.getAttribute('data-tab')));
 });
+// Accordion functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      // Close all open accordion bodies
+      document.querySelectorAll(".accordion-body").forEach(body => {
+        body.classList.remove("open");
+      });
+
+      // If the clicked one was already open, don’t reopen
+      const body = header.nextElementSibling;
+      if (!body.classList.contains("open")) {
+        body.classList.add("open");
+      }
+    });
+  });
+});
+
