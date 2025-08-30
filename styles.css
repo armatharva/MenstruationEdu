@@ -1549,41 +1549,4 @@ p {
     color: var(--purple-800);
     line-height: 1.6;
     margin: 0;
-
-}
-/* Accordion Q&A */
-.accordion {
-  max-width: 800px;
-  margin: 2em auto;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-header {
-  width: 100%;
-  background: #f8f8f8;
-  border: none;
-  outline: none;
-  padding: 1em;
-  text-align: left;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.accordion-header:hover {
-  background: #eee;
-}
-
-.accordion-body {
-  display: none;
-  padding: 1em;
-  background: #fff;
-  line-height: 1.6;
-}
-
-.accordion-body.open {
-  display: block;
 }
