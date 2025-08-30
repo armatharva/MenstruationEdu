@@ -240,3 +240,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.querySelectorAll(".qa-question").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Close all others
+    document.querySelectorAll(".qa-question").forEach((other) => {
+      if (other !== btn) {
+        other.setAttribute("aria-expanded", "false");
+        other.nextElementSibling.style.display = "none";
+      }
+    });
+
+    // Toggle this one
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", !expanded);
+    btn.nextElementSibling.style.display = expanded ? "none" : "block";
+  });
+});
+
