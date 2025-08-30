@@ -1549,4 +1549,25 @@ p {
     color: var(--purple-800);
     line-height: 1.6;
     margin: 0;
+
+}
+.qa-question {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.qa-answer {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid #0077cc;
+  margin-bottom: 10px;
 }
