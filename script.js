@@ -107,46 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Q&A Accordion functionality
-    const qaQuestions = document.querySelectorAll('.qa-question');
-    
-    console.log('Found Q&A questions:', qaQuestions.length);
-    
-    qaQuestions.forEach((question, index) => {
-        question.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            const answer = this.nextElementSibling;
-            
-            console.log(`Q&A ${index + 1} clicked, was expanded:`, isExpanded);
-            
-            // Toggle current answer
-            if (isExpanded) {
-                this.setAttribute('aria-expanded', 'false');
-                answer.classList.remove('active');
-                console.log(`Q&A ${index + 1} collapsed`);
-            } else {
-                // Close all other answers first (optional - comment out if you want multiple open)
-                qaQuestions.forEach(q => {
-                    if (q !== this) {
-                        q.setAttribute('aria-expanded', 'false');
-                        q.nextElementSibling.classList.remove('active');
-                    }
-                });
-                
-                this.setAttribute('aria-expanded', 'true');
-                answer.classList.add('active');
-                console.log(`Q&A ${index + 1} expanded`);
-            }
-        });
-        
-        // Add keyboard support for accessibility
-        question.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    });
+    // Q&A Accordion functionality is handled by inline onclick functions in HTML
+    // This prevents conflicts with the working accordion system
     
     // Smooth scrolling for better UX
     document.documentElement.style.scrollBehavior = 'smooth';
