@@ -234,4 +234,60 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+<script>
+/* Q&A accordion: one-open-at-a-time, no HTML changes needed */
+(function () {
+  function closeAll(exceptItem) {
+    document.querySelectorAll(".qa-item").forEach(item => {
+      const btn = item.querySelector(".qa-question");
+      const ans = item.querySelector(".qa-answer");
+      if (!btn || !ans) return;
+
+      if (item !== exceptItem) {
+        item.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        ans.style.display = "none";     // hard hide
+        ans.setAttribute("hidden", ""); // a11y/fallback
+      }
+    });
+  }
+
+  // Start hidden
+  document.querySelectorAll(".qa-item").forEach(item => {
+    const btn = item.querySelector(".qa-question");
+    const ans = item.querySelector(".qa-answer");
+    if (!btn || !ans) return;
+    item.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+    ans.style.display = "none";
+    ans.setAttribute("hidden", "");
+  });
+
+  // Event delegation = works even if items are added later
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".qa-question");
+    if (!btn) return;
+
+    const item = btn.closest(".qa-item");
+    const ans  = btn.nextElementSibling; // your HTML has answer right after button
+    if (!item || !ans || !ans.classList.contains("qa-answer")) return;
+
+    const willOpen = btn.getAttribute("aria-expanded") !== "true";
+    closeAll(item);
+
+    if (willOpen) {
+      item.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+      ans.removeAttribute("hidden");
+      ans.style.display = "block";
+    } else {
+      item.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+      ans.style.display = "none";
+      ans.setAttribute("hidden", "");
+    }
+  });
+})();
+</script>
+
 
