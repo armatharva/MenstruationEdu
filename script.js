@@ -215,3 +215,23 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('MenstruationEdu website initialized successfully!');
     console.log('Available tabs:', Array.from(tabTriggers).map(t => t.getAttribute('data-tab')));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const questions = document.querySelectorAll(".qa-question");
+
+  questions.forEach(button => {
+    button.addEventListener("click", () => {
+      const answer = button.nextElementSibling;
+      const expanded = button.getAttribute("aria-expanded") === "true";
+
+      // Close all other answers
+      document.querySelectorAll(".qa-answer").forEach(a => a.style.display = "none");
+      document.querySelectorAll(".qa-question").forEach(q => q.setAttribute("aria-expanded", "false"));
+
+      if (!expanded) {
+        answer.style.display = "block";
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+});
+
