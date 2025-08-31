@@ -1576,3 +1576,37 @@ p {
 .qa-question[aria-expanded="true"] .chevron-icon {
   transform: rotate(180deg);
 }
+/* Q&A basics */
+.qa-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  text-align: left;
+  background: #f7f7fb;
+  border: 1px solid #ececf3;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.qa-question:hover { background: #f1effa; }
+
+.qa-answer {
+  background: #fff;
+  border-left: 3px solid #9b5de5; /* purple accent */
+  border-radius: 8px;
+  padding: 1rem;
+  margin: .75rem 0 1rem;
+  line-height: 1.6;
+}
+
+/* Chevron rotation */
+.chevron-icon {
+  transition: transform .2s ease;
+}
+.qa-item.open .chevron-icon {
+  transform: rotate(180deg);
+}
+
