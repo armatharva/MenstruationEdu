@@ -7,6 +7,28 @@
     <title>MenstruationEdu - Your Guide to Menstrual Health</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    
+    <!-- Q&A Accordion Function - Loaded early to avoid timing issues -->
+    <script>
+        function toggleAnswer(button) {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const answer = button.nextElementSibling;
+            
+            console.log('Toggle function called!', isExpanded);
+            
+            if (isExpanded) {
+                button.setAttribute('aria-expanded', 'false');
+                answer.classList.remove('active');
+                console.log('Collapsed');
+            } else {
+                button.setAttribute('aria-expanded', 'true');
+                answer.classList.add('active');
+                console.log('Expanded');
+            }
+        }
+        
+        console.log('Toggle function loaded in head!');
+    </script>
 </head>
 <body>
     <!-- Girl Scouts Logo in corner -->
@@ -961,27 +983,5 @@
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="script.js" defer></script>
-    
-    <!-- Simple accordion test function -->
-    <script>
-        function toggleAnswer(button) {
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            const answer = button.nextElementSibling;
-            
-            console.log('Toggle function called!', isExpanded);
-            
-            if (isExpanded) {
-                button.setAttribute('aria-expanded', 'false');
-                answer.classList.remove('active');
-                console.log('Collapsed');
-            } else {
-                button.setAttribute('aria-expanded', 'true');
-                answer.classList.add('active');
-                console.log('Expanded');
-            }
-        }
-        
-        console.log('Simple toggle function loaded!');
-    </script>
 </body>
 </html>
